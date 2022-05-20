@@ -1,0 +1,406 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17 de set de 2020, 23:11:12
+    Author     : paulo
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#wrapper{
+    min-height: 100%;
+    position: relative;
+}
+
+header {
+    background-color: #1E64A2;
+    margin: 0;
+    width: 100%;
+    height: 80px;
+}
+
+header section {
+    width: 1200px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+
+header .header-logo {
+    width: 300px;
+}
+
+header .header-menu {
+    width: 900px;
+}
+
+nav {
+    margin-top: 20px;
+    width: 900px;
+}
+
+nav a {
+    color: #FFF;
+    font-size: 14pt;
+    text-decoration:none;
+    margin-right: 30px;
+}
+
+nav a:HOVER {
+    color: #CCC;
+    font-size: 14pt;
+    text-decoration:none;
+}
+
+main{
+    width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;  
+    padding-bottom: 100px;
+    clear: both;
+}
+
+main section{
+
+}
+
+aside{
+    background-color: #fff;
+    width: 290px;
+    margin-top: 10px;
+    height: 500px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: #1E64A2;
+    height: 60px;
+    clear:  both;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+footer section {
+    width: 1200px;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    color: #CCC;
+}
+
+.boxLogin {
+    width: 35%;
+    height: 270px;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #f7f7f7;
+    border-radius: 25px;
+}
+
+.boxLogin .iTxt {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+}
+
+.boxLogin .iBtn {
+    padding: 20px;
+    margin: 10px;
+    width: 80%;
+    background-color: #1E64A2;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.boxLogin .iBtn:hover {
+    padding: 20px;
+    margin: 10px;
+    width: 80%;
+    background-color: #67a5db;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.box_error {
+    width: 100%;
+    height: 35px;
+    background-color: rgba(255,0,0,1);
+    border: 5px solid red;
+    color: #FFF;
+    position: fixed;
+    z-index: 99999;
+    padding: 20px;
+    font-size: 26px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+.box_msg {
+    width: 100%;
+    height: 35px;
+    background-color: green;
+    border: 5px solid green;
+    color: #FFF;
+    position: fixed;
+    z-index: 99999;
+    padding: 20px;
+    font-size: 26px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+.box_danger {
+    width: 100%;
+    height: 35px;
+    background-color: red;
+    border: 5px solid red;
+    color: #FFF;
+    position: fixed;
+    z-index: 99999;
+    padding: 20px;
+    font-size: 26px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+.searchForm .iTxt {
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+.searchForm .iBtn {
+    padding: 10px;
+    margin: 10px;
+    background-color: #1E64A2;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.searchForm .iBtn:hover {
+    padding: 10px;
+    margin: 10px;
+    background-color: #67a5db;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.listBox {
+
+}
+.listBox table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.listBox th, .listBox td {
+    text-align: left;
+    padding: 8px;
+}
+
+.listBox tr:nth-child(even){background-color: #f2f2f2}
+
+.listBox th {
+    background-color: #1E64A2;
+    color: white;
+}
+
+.listBox .addNutton {
+    text-align: right;
+    width: 100%;
+    height: 50px;
+    margin-top: -40px;
+}
+
+.listBox .addNutton a {
+    font-size: 16px;
+    border: 1px solid blue;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.listBox .addNutton a:hover {
+    background-color: blue;
+    color: #fff;
+}
+
+.row {
+    margin: 10px 0 10px 0;
+    clear: both;
+}
+.pagination {
+    float: left;
+}
+.pagination ul {
+    width: 100%;
+}
+.pagination li {
+    float: left;
+    text-decoration: none;
+    list-style: none;
+    margin: 2px;
+}
+.pagination li .page-link {
+    padding: 5px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+}
+.pagination li .page-link:hover {
+    border: 1px solid blue;
+    color: blue;
+}
+
+.itens_per_page {
+    float: right;
+}
+
+.itens_per_page .col {
+    margin-left: 10px;
+    float: left;
+}
+
+.formBox {
+    width: 100%;
+    margin: 10px;
+}
+
+.formBox label {
+    padding: 10px;
+    clear: both;
+}
+
+.formBox .input {
+    padding: 10px;
+    margin: 10px;
+    clear: both;
+}
+
+.input5 {
+    width: 5%;
+}
+.input10 {
+    width: 10%;
+}
+.input20 {
+    width: 20%;
+}
+.input30 {
+    width: 30%;
+}
+.input40 {
+    width: 40%;
+}
+.input50 {
+    width: 50%;
+}
+.input60 {
+    width: 60%;
+}
+.input70 {
+    width: 70%;
+}
+.input80 {
+    width: 80%;
+}
+.input90 {
+    width: 90%;
+}
+.input100 {
+    width: 100%;
+}
+
+.iBtn {
+    padding: 10px 30px 10px 30px;
+    margin: 10px;
+    background-color: #1E64A2;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.iBtn:hover {
+    padding: 10px 30px 10px 30px;
+    margin: 10px;
+    background-color: #67a5db;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.iBtnRed {
+    padding: 10px 30px 10px 30px;
+    margin: 10px;
+    background-color: red;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.iBtnRed:hover {
+    padding: 10px 30px 10px 30px;
+    margin: 10px;
+    background-color: #ff5151;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.iBtnGreen {
+    padding: 10px 30px 10px 30px;
+    margin: 10px;
+    background-color: green;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.iBtnGreen:hover {
+    padding: 10px 30px 10px 30px;
+    margin: 10px;
+    background-color: #00d61c;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.col4 {
+    float: left;
+    width: 33%;
+}
+
+#suggesstion-box {
+    float: left;
+    z-index: 99999;
+}
+.searchList{
+    float:left;
+    list-style:none;
+    margin:50px 0 0 10px;
+    padding:0;
+    width:190px;
+    position: absolute;
+}
+
+.searchList li{padding: 10px; background: #f0f0f0; border-bottom: #bbb9b9 1px solid;}
+.searchList li:hover{background:#ece3d2;cursor: pointer;}
+#search-box{padding: 10px;border: #a8d4b1 1px solid;border-radius:4px;}
+
+.showProducts td {
+    padding: 5px;
+}
